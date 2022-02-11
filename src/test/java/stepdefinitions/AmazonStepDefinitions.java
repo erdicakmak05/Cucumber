@@ -69,6 +69,6 @@ public class AmazonStepDefinitions {
 
     @Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String istenenUrl) {
-        Driver.getDriver().get(ConfigReader.getProperty("AmazonUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
     }
 }
