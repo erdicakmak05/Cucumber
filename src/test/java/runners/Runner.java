@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber_rapor.html"},
         features = "src/test/resources/features", // featurelarin yolu
         glue = "stepdefinitions", //methodların yolu
-        tags = "@Editor",
-        dryRun = true   //True ise driver'i çalıştırmadan eksik methodlari verir
+        tags = "@WebU",
+        dryRun = false   //True ise driver'i çalıştırmadan eksik methodlari verir
 )
 public class Runner {
 
