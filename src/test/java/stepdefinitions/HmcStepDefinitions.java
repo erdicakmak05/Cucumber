@@ -12,11 +12,11 @@ public class HmcStepDefinitions {
     HMCPage hmcPage = new HMCPage();
 
     @Given("kullanıcı login linkine tiklar")
-    public void kullanıcı_login_linkine_tiklar() {
+    public void kullanici_login_linkine_tiklar() {
         hmcPage.mainPageLogin.click();
     }
     @Then("kullanıcı adi olarak {string} girer")
-    public void kullanıcı_adi_olarak_girer(String kullaniciTipi) {
+    public void kullanici_adi_olarak_girer(String kullaniciTipi) {
         hmcPage.userNameTextBox.sendKeys(ConfigReader.getProperty(kullaniciTipi));
     }
     @Then("password olarak {string} girer")
