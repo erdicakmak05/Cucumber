@@ -6,16 +6,20 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber_rapor.html"},
-        features = "src/test/resources/features", // featurelarin yolu
-        glue = "stepdefinitions", //methodların yolu
-        tags = "@toplu",
-        dryRun = false   //True ise driver'i çalıştırmadan eksik methodlari verir
+        plugin={"html:target\\cucumber-reports.html"},
+        features="src/test/resources/features",
+        glue = "stepdefinitions",
+        tags="@Dinamik",
+        dryRun = true
 )
-public class Runner {
 
-    //Runner class'inin bodysine hiçbir kod yazmıyoruz
-    //Önemli olan bu class icin 2 adet notasyon kullanacağız
+public class Runner {
+    // Runner class'inin body'sine hic bir kod yazmiyoruz
+    // bu class icin onemli olan kullanacagimiz 2 adet notasyon
+
+    // dryRun=false yazildiginda belirlenen tag'la etiketlenen tum scenario'lari sirasiyla calistirir
+    // dryRun=true dedigimizde ise kodlari calistirmadan eksik stepler olup olmadigini kontrol eder
+    // ve varsa bize eksik stepleri rapor eder
 
     // features ve glue olarak spesifik bir class veya feature dosyasini degil
     // tum klasor ve package'i sectik
